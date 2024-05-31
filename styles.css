@@ -1,0 +1,206 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background: linear-gradient(135deg, #6a0dad, #b19cd9);
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    margin-top: 50px;
+}
+
+input[type="text"] {
+    padding: 10px;
+    font-size: 1em;
+    border: 2px solid #add8e6;
+    border-radius: 5px;
+    background-color: #4b0082;
+    color: white;
+    margin-bottom: 10px;
+}
+
+input[type="text"]::placeholder {
+    color: #add8e6;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+    background-color: #6a0dad;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #5a0cb2;
+}
+
+#message {
+    font-size: 2em;
+    margin-top: 20px;
+    color: #fff;
+}
+
+#balloonsContainer {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+    margin-top: 20px;
+}
+
+.balloon {
+    position: absolute;
+    bottom: -100px;
+    width: 50px;
+    height: 70px;
+    background-color: red;
+    border-radius: 50%;
+    opacity: 0.7;
+    animation: rise 5s infinite;
+}
+
+@keyframes rise {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-800px);
+    }
+}
+
+/* Estilos para el alert personalizado */
+.custom-alert {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: purple;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    z-index: 1000;
+}
+
+.custom-alert p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.custom-alert button {
+    padding: 10px 20px;
+    margin: 0 10px;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#yesButton {
+    background-color: #6a0dad;
+    color: white;
+}
+
+#noButton {
+    background-color: #b22222;
+    color: white;
+}
+
+/* Animación de quemarse */
+.burn {
+    animation: burn 2s forwards;
+}
+
+@keyframes burn {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(0);
+        opacity: 0;
+    }
+}
+
+/* Estilo de carta antigua */
+.old-letter {
+    background: url('https://www.toptal.com/designers/subtlepatterns/patterns/old_map.png');
+    padding: 20px;
+    border-radius: 10px;
+    width: 60%;
+    margin: 20px auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.old-letter p {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.2em;
+    color: #4b0082;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background: linear-gradient(135deg, #6a0dad, #b19cd9);
+    margin: 0;
+    padding: 0;
+    color: white; /* Mejor legibilidad sobre fondo oscuro */
+}
+
+.container {
+    padding: 10px;
+    margin-top: 20px; /* Espaciado superior reducido */
+}
+
+input[type="text"], button {
+    width: 100%; /* Ancho completo para mejor accesibilidad en móviles */
+    padding: 12px;
+    margin: 10px 0; /* Espaciado uniforme */
+}
+
+.old-letter {
+    background: url('https://www.toptal.com/designers/subtlepatterns/patterns/old_map.png');
+    padding: 20px;
+    border-radius: 10px;
+    width: 90%; /* Más estrecho en móviles */
+    margin: 20px auto;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-size: 0.9em; /* Texto más pequeño para dispositivos móviles */
+}
+
+.custom-alert {
+    width: 80%; /* Adaptar ancho en móviles */
+    padding: 15px;
+}
+
+/* Media Queries */
+@media (min-width: 768px) {
+    .container {
+        width: 50%;
+        margin: 50px auto; /* Centrado y más margen en pantallas grandes */
+    }
+
+    .old-letter, .custom-alert {
+        width: 60%; /* Más anchura adecuada para pantallas grandes */
+    }
+
+    input[type="text"], button {
+        max-width: 500px; /* Evitar que el botón y el input sean demasiado anchos */
+    }
+}
+
+/* Ajustes de animación */
+@keyframes rise {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-100vh); /* Se ajusta al alto de la ventana del navegador */
+    }
+}
